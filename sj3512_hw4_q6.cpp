@@ -10,7 +10,7 @@ int main() {
     cout<<"Please enter a positive integer: ";
     cin>>num;
 
-    for(counter = 1; counter < num; counter++) {
+    for(counter = 1; counter <= num; counter++) {
         n = counter;
         flag = false;
         while(n != 0){
