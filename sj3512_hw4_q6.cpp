@@ -6,27 +6,29 @@ using namespace std;
 int main() {
     int n, num;
     int counter, remainder;
-    bool flag;
+    int even_counter, odd_counter;
     cout<<"Please enter a positive integer: ";
     cin>>num;
 
     for(counter = 1; counter <= num; counter++) {
         n = counter;
-        flag = false;
+        even_counter = 0;
+        odd_counter = 0;
         while(n != 0){
             remainder = n % 10;
-            //if odd exit loop
             if((remainder % 2) == 1){
-                flag = true;
+                odd_counter++;
             }
-            n /= 10;
+            else{
+                even_counter++;
             }
-        //if even print
-        if(flag == false){
+            n = n / 10;
+            }
+        if(even_counter > odd_counter){
             cout<<counter<<endl;
         }
+        
     }
-
-
+    
     return 0;
 }
